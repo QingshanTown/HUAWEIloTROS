@@ -1,0 +1,15 @@
+[submodule "base_control"]
+	path = base_control
+	url = https://gitee.com/bingda-robot/base_control.git
+[submodule "lidar"]
+	path = lidar
+	url = https://gitee.com/bingda-robot/lidar.git
+[submodule "robot_vision"]
+	path = robot_vision
+	url = https://gitee.com/bingda-robot/robot_vision.git
+[submodule "robot_navigation"]
+	path = robot_navigation
+	url = https://gitee.com/bingda-robot/robot_navigation.git
+[submodule "robot_simulation"]
+	path = robot_simulation
+	url = https://gitee.com/bingda-robot/robot_simulation.git
