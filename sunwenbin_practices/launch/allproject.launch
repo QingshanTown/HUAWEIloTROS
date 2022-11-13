@@ -3,7 +3,7 @@
     <!-- <include file="$(find robot_vision)/launch/robot_following.launch">
     </include> -->
 
-    <include file="$(find robot_vision)/launch/laserscanvisual.launch">
+    <include file="$(find sunwenbin_practices)/launch/laserscanvisual.launch">
     </include>
 
     <include file="$(find sunwenbin_practices)/launch/face_recognition.launch">

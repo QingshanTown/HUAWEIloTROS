@@ -21,11 +21,15 @@ class laserscanvisual:
         self.odomdir_pub = rospy.Publisher("/odomdir", Image, queue_size=1)
         self.bridge = CvBridge()
         self.angle = 0
+        self.x0 = 0
+        self.y0 = 0
 
     def odomcallback(self,data):
         frame0 = np.zeros((600, 600,3), np.uint8)
         x0 = -math.trunc(250 * math.cos((data.pose.pose.orientation.z +1.5)* 3.1416))
         y0 = math.trunc(250 * math.sin((data.pose.pose.orientation.z + 1.5)* 3.1416))
+        self.x0 = x0
+        self.y0 = y0
         cv2.arrowedLine(frame0, (300, 300), (x0+300, y0+300), (0, 0, 255), thickness=10, line_type=cv2.LINE_4, shift=0, tipLength=0.1)
         # 画个中心圆 
         cv2.circle(frame0, (300, 300), 10, (255, 255, 0))
@@ -62,6 +66,7 @@ class laserscanvisual:
             angle= angle + data.angle_increment
         # 画个中心圆 
         cv2.circle(frame, (300, 300), 2, (255, 255, 0))
+        #cv2.arrowedLine(frame, (300, 300), (-self.x0+300, -self.y0+300), (0, 0, 255), thickness=10, line_type=cv2.LINE_4, shift=0, tipLength=0.1)
 
         # draw arrowline
         # cv2.arrowedLine(frame, (300, 300), (300, 350), (0, 0, 255), thickness=3, line_type=cv2.LINE_4, shift=0, tipLength=0.1)
