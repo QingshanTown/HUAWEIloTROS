@@ -16,12 +16,4 @@
 [submodule "bingda_tutorials"]
 	path = bingda_tutorials
 	url = https://gitee.com/bingda-robot/bingda_tutorials
-[submodule "moveit_msgs"]
-	path = moveit_msgs
-	url = https://github.com/ros-planning/moveit_msgs.git
-[submodule "niryo_one_ros"]
-	path = niryo_one_ros
-	url = https://github.com/NiryoRobotics/niryo_one_ros.git
-[submodule "ROS-TCP-Endpoint"]
-	path = ROS-TCP-Endpoint
-	url = https://github.com/Unity-Technologies/ROS-TCP-Endpoint.git
+
